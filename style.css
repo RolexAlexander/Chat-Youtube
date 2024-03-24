@@ -1,0 +1,178 @@
+.titlebar{
+    margin-left: 0px;
+    padding-left: 20px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    border-bottom: 2px solid rgb(250, 250, 250);
+    box-shadow: 0px 4px 6px rgba(128, 128, 128, 0.5);
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.circle {
+    width: 60px; /* Adjust the width to your preference */
+    height: 60px; /* Adjust the height to your preference */
+    border-radius: 50%;
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the content is within the circle */
+}
+
+.circle h1 {
+    margin: 0; /* Remove default margin */
+}
+
+.info {
+    display: block;
+    margin: 10px;
+    border: 3px;
+}
+
+.info p {
+    margin: 0px; /* Adjust the vertical margin */
+}
+
+.info p:last-child {
+    color: green; /* Color the last <p> element (Online) in green */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+}
+
+.info p:first-child {
+    /* color: red; Color the first <p> element (Offline) in red */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-weight: 1000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the body takes at least the full viewport height */
+}
+
+.container {
+    flex: 1; /* Allow the container to grow and take available space */
+}
+
+.input {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(128, 128, 128, 0.5);
+    border: 2px solid rgb(45, 41, 41);
+    margin-right: 5%; /* Adjust the margin on the right */
+}
+
+form {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 8px;
+    border: none;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+button i.fa-microphone,
+button i.fa-paper-plane {
+    font-size: 18px;
+    color: gray;
+    background-color: white;
+    padding: 1px; /* Adjust padding as needed */
+}
+
+button i.fa-paper-plane{
+    margin-right: 5px;
+}
+
+html{
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: 0px;
+}
+
+html body{
+    margin: 0px;
+    border: 0px;
+}
+
+/* Add styles for the messages box */
+.messages_box {
+    margin-top: 75px; /* Adjusted to start from the bottom of the title bar */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 165px); /* Adjusted to dynamically adjust based on the screen */
+    position: relative; /* Set position to relative */
+}
+
+/* Add styles for AI messages */
+.message-container.ai-message {
+    background-color: #f2f2f2; /* Light gray */
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    box-shadow: 0px 4px 6px rgba(128, 128, 128, 0.5);
+}
+
+/* Add styles for user messages */
+.message-container.user-message {
+    /* background-color: #007bff; Blue */
+    /* color: white; */
+    background-color: #f2f2f2; /* Light gray */
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    margin-left: auto; /* Push the message box to the right */
+    box-shadow: 0px 4px 6px rgba(128, 128, 128, 0.5);
+}
+
+/* Add styles for the timestamp */
+.timestamp {
+    font-size: 12px;
+    color: #777; /* Adjust color as needed */
+    margin-top: 5px; /* Add spacing between message and timestamp */
+}
+
+/* Adjust layout for AI messages */
+.message-container.ai-message {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjust layout for user messages */
+.message-container.user-message {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Align timestamp to the right for user messages */
+.user-message .timestamp {
+    align-self: flex-end;
+}
+
+/* Align timestamp to the left for AI messages */
+.ai-message .timestamp {
+    align-self: flex-start;
+}

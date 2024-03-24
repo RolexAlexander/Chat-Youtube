@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "YTC",
+    "version": "1.0",
+    "description": "YTC",
+    "action": {
+        "default_popup": "YTC.html",
+        "default_icon": "logo.png"
+    },
+    "side_panel": {
+        "default_path": "YTC.html"
+    },
+    "permissions": [
+        "sidePanel",
+        "tabs",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "js": ["script.js"],
+            "matches": [
+                "https://youtube.com/*/*",
+                "http://*/*",
+                "https://*/*"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
