@@ -1,0 +1,12 @@
+torch==2.0.0
+transformers==4.25.1
+langchain==0.1.9
+openai==1.13.3
+whisper-timestamped==1.12.20
+ffmpeg-python==0.2.0
+langchain-community==0.0.24
+langchain-core==0.1.27
+langchain_openai==0.0.8
+langchain-experimental==0.0.52
+spacy==3.7.2
+fastapi==0.75.0

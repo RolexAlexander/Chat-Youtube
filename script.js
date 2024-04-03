@@ -20,7 +20,13 @@ function sendMessage(message) {
         let video_id = result["video_id"]; 
         console.log("Checking if the value was retured: ",video_id);
 
-        fetch(`http://localhost:9000/chat/${video_id}`, {
+        // TODO: Retrieve backend URL from environment variable
+        const backendUrl = 'http://localhost:8000';
+
+        // Construct the URL for the POST request
+        let apiUrl = `${backendUrl}/chat/${video_id}`;
+
+        fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
