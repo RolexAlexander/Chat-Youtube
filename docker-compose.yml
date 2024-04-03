@@ -11,6 +11,8 @@ services:
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
       - DEBIAN_FRONTEND=nointeractive
+      - BACKEND_URL=http://localhost:8000
+      - OPENAI_API_KEY=xxxxxxxxxxxxxxxxxx
     volumes:
       - .:/usr/src/app
     restart: always
