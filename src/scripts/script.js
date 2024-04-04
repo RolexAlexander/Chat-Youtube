@@ -1,4 +1,4 @@
-console.log("Let be great!!!");
+console.log("Let's be great!!!");
 
 // Function to send message to localhost:9000
 function sendMessage(message) {

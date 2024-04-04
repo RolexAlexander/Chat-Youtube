@@ -31,6 +31,9 @@ RUN pip install langchain_openai==0.0.8
 RUN pip install langchain-experimental==0.0.52
 RUN pip install spacy==3.7.2
 RUN pip install fastapi==0.75.0
+RUN pip install yt_dlp==2024.3.10
+RUN pip install python-dotenv==1.0.0
+RUN pip install faiss-cpu==1.8.0
 
 
 # Copy the rest of the files from the api directory to the working directory

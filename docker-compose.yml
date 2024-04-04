@@ -2,18 +2,16 @@ version: '3.8'
 
 services:
   app:
+    container_name: chat-youtube-api
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "${PORT}:${PORT}"
     environment:
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
       - DEBIAN_FRONTEND=nointeractive
-      - BACKEND_URL=http://localhost:8000
-      - OPENAI_API_KEY=xxxxxxxxxxxxxxxxxx
-    volumes:
-      - .:/usr/src/app
+    env_file: ./.env # we need this cause it got our apikey and url
     restart: always
-    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "${PORT}"]

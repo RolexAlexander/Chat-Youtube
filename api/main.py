@@ -55,6 +55,7 @@ async def chat(body: ChatRequest, video_id: str = Path(..., title="Video ID"), )
     try:
         # grab api key
         openai_api_key = env_vars["OPENAI_API_KEY"]
+        print("OpenAI API key:", openai_api_key, flush=True)
         # fetch transcript from YouTube
         response = get_local_or_download_youtube_transcript(video_id)
 

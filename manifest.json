@@ -5,7 +5,13 @@
     "description": "YTC",
     "action": {
         "default_popup": "YTC.html",
-        "default_icon": "logo.png"
+        "default_icon": "assets/logo.png"
+    },
+    "icons": {
+        "16": "assets/icon-16.png",
+        "32": "assets/icon-32.png",
+        "48": "assets/icon-48.png",
+        "128": "assets/icon-128.png"
     },
     "side_panel": {
         "default_path": "YTC.html"
@@ -19,7 +25,7 @@
     ],
     "content_scripts": [
         {
-            "js": ["script.js"],
+            "js": ["./src/scripts/script.js"],
             "matches": [
                 "https://youtube.com/*/*",
                 "http://*/*",
@@ -30,8 +36,5 @@
     "host_permissions": [
         "http://*/*",
         "https://*/*"
-    ],
-    "background": {
-        "service_worker": "background.js"
-    }
+    ]
 }
