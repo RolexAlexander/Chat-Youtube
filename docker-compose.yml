@@ -15,5 +15,5 @@ services:
     env_file: ./.env # we need this cause it got our apikey and url
     restart: always
     volumes:
-      - ./data:/usr/src/app/data
+      - ./data:/usr/src/app
     command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "${PORT}"]

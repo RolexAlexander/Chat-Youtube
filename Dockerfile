@@ -37,9 +37,8 @@ RUN pip install faiss-cpu==1.8.0
 
 
 # Copy the rest of the files from the api directory to the working directory
-# COPY api/* /usr/src/app
 COPY api/* .
-# COPY . .
+COPY .env .
 
 # run API
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
